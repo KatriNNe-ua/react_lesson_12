@@ -5,7 +5,7 @@ function Home() {
           <div className="home__img">
             <img src="react-icon.png" alt="icon react" />
           </div>
-          <h1 className="home__title">Homework #11</h1>
+          <h1 className="home__title">Homework #12</h1>
       </div>
     </div>
   );
