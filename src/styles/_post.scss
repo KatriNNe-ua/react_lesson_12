@@ -1,0 +1,176 @@
+.post {
+	// .post__container
+
+	&__container {
+		padding-block: 50px;
+		display: grid;
+		gap: 20px;
+	}
+
+	// .post__list
+
+	&__list {
+		display: grid;
+		gap: 20px;
+	}
+
+	// .post__item
+
+	&__item {
+		padding: 20px;
+		background-color: #595858;
+		border-radius: 10px;
+		display: grid;
+		gap: 15px;
+	}
+
+	// .post__title
+
+	&__title {
+		text-align: center;
+		font-size: 23px;
+		font-weight: 600;
+		text-decoration: underline;
+		text-decoration: underline;
+		text-underline-offset: 10px;
+		text-decoration-thickness: 0.2px;
+		text-decoration-color: #c478fa;
+	}
+
+	// .post__text
+
+	&__text {
+		line-height: 1.5;
+	}
+
+	// .post__wrapper
+
+	&__wrapper {
+		display: flex;
+		gap: 20px;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	// .post__block
+
+	&__block {
+		display: flex;
+		gap: 20px;
+	}
+
+	// .post__reviews
+
+	&__reviews {
+		font-weight: 600;
+	}
+
+	// .post__reviews--like
+
+	&__reviews--like {
+		color: #9eeca8;
+	}
+
+	// .post__reviews--dislike
+
+	&__reviews--dislike {
+		color: #f25858;
+	}
+
+	// .post__author
+
+	&__author {
+		span {
+			color: #ffffff;
+			font-weight: 800;
+		}
+	}
+
+	// .post__btn
+
+	&__btn {
+		width: fit-content;
+		justify-self: end;
+	}
+
+	// .post__pagination
+
+	&__pagination {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 5px;
+	}
+
+	// .post__form
+
+	&__form {
+	}
+	&__number{
+		display: flex;
+		gap: 10px;
+	}
+	&__more-btn{
+		margin: 0 auto;
+		button{
+			background-color: inherit;
+			border: 1px solid #c478fa;
+		}
+	}
+}
+.form {
+	display: grid;
+	gap: 15px;
+	background-color: #595858;
+	padding: 20px;
+	border-radius: 10px;
+	// .form__item
+
+	&__item {
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		label {
+			color: #c478fa;
+			font-size: 20px;
+			font-weight: 800;
+			min-width: 200px;
+		}
+		input,
+		textarea {
+			border: 1px solid #c478fa;
+			border-radius: 5px;
+			padding: 5px;
+			transition: all 0.3s;
+			font-size: 18px;
+		}
+
+		input:hover,
+		textarea:hover {
+			background-color: #3d3c3c;
+		}
+
+		input:focus-visible,
+		textarea:focus-visible {
+			background-color: #3d3c3c;
+			border: 1px solid #c478fa;
+			outline: 1px solid #c478fa;
+		}
+		textarea {
+			resize: vertical;
+			min-height: 60px;
+		}
+		&__textarea {
+			margin-left: -10px;
+		}
+	}
+
+	// .form__btn
+
+	&__btn {
+	}
+
+	
+}
+
+.pagination {
+}

@@ -1,0 +1,169 @@
+@use "sass:math";
+
+body {
+	font-family: "Manrope", sans-serif;
+	background-color: #323232;
+}
+
+.wrapper {
+	width: 100%;
+	color: #ffffff;
+	min-height: 100%;
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+
+	main {
+		flex-grow: 1;
+	}
+}
+
+[class*="__container"] {
+	max-width: 1000px;
+	margin-inline: auto;
+	padding-inline: 15px;
+}
+//=============================================
+.header {
+	// .header__container
+
+	&__container {
+		padding-block: 20px;
+		border-bottom: 1px solid #c478fa;
+		font-weight: 800;
+	}
+
+	// .header__menu
+
+	&__menu {
+	}
+}
+.menu {
+	color: #c478fa;
+	font-size: 25px;
+	font-weight: 800;
+	// .menu__list
+
+	&__list {
+		display: flex;
+		gap: 50px;
+	}
+
+	// .menu__item
+
+	&__item {
+		transition: all 0.3s;
+		&:hover {
+			color: #dba9ff;
+		}
+	}
+	&__link {
+		transition: all 0.3s;
+		&--active {
+			text-decoration: underline;
+			text-underline-offset: 10px;
+			text-decoration-thickness: 0.2px;
+		}
+	}
+}
+
+//=============================================
+.footer {
+	&__container {
+		padding-block: 10px;
+	}
+}
+//========================================
+.home {
+	min-height: 100svh;
+	&-dark {
+		background-color: rgb(86, 82, 87);
+		color: #ffffff;
+	}
+	&-light {
+		color: #080808;
+		background-color: rgb(235, 232, 235);
+	}
+
+	// .home__container
+
+	&__container {
+		padding-block: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 30px;
+		margin-bottom: 100px;
+	}
+
+	// .home__img
+
+	&__img {
+		width: 150px;
+		aspect-ratio: 1;
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+
+	// .home__title
+
+	&__title {
+		font-size: 60px;
+		font-weight: 800;
+	}
+}
+
+.page {
+	// .page__container
+
+	&__container {
+		min-height: 100svh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 60px;
+		font-weight: 800;
+	}
+}
+//=====================
+.btn {
+	//color: #0f8469;
+	background-color: #c478fa;
+	font-size: 20px;
+	font-weight: 800;
+	padding: 10px 20px;
+	border-radius: 5px;
+	transition: all 0.3s;
+	&:hover {
+		background-color: #dba9ff;
+	}
+	&:disabled{
+		background-color: #7f708a;
+		cursor: default;
+	}
+	&--active{
+		background-color: #dba9ff;
+	}
+}
+//=================
+/* HTML: <div class="loader"></div> */
+.loader {
+	margin: 0 auto;
+  width: 50px;
+  padding: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #c478fa;
+  --_m: 
+    conic-gradient(#0000 10%,#000),
+    linear-gradient(#000 0 0) content-box;
+  -webkit-mask: var(--_m);
+          mask: var(--_m);
+  -webkit-mask-composite: source-out;
+          mask-composite: subtract;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {to{transform: rotate(1turn)}}
